@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    {
+        // 写一个方法，找出字符串 “abcabcabcabcabcabda” 中 “ab” 出现的次数和位置。
+        var str = "abcabcabcabcabcabda";
+        var arr = [] //用来存放ab出现的下标
+        var p = 0
+        var sum = 0
+        // while 循环会在指定条件为真时循环执行代码块
+        while (str.indexOf('ab', p) != -1 && p < str.length) {
+            arr.push(str.indexOf('ab', p));
+            p = str.indexOf('ab', p) + 2;
+            sum++
+        }
+        console.log("出现的位置" + arr)
+        console.log("出现的次数" + sum)
+    }
+    {
+        // 冒泡排序
+        var arr = [100,0.6,28,49,94,67,11]
+        for(let i=0;i<arr.length-1;i++){
+            // console.log("i="+arr[i])
+            for(let j=0;j<arr.length-i-1;j++){
+                // console.log("j="+arr[j])
+                // console.log("j+1="+arr[j+1])
+                if(arr[j]>arr[j+1]){
+                    //把大的数字放到后面
+                    var empty = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = empty
+                }
+            }
+        }
+        console.log(arr)
+    }
+</script>
+
+</html>
